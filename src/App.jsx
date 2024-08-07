@@ -16,7 +16,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>src assets: images prt 3</h1>
+      <h1>rt assets - prt 1</h1>
     </>
   )
 }
