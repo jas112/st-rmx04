@@ -45,7 +45,7 @@ const emailDevelopmentSectionData = new SectionData(
 // item thumbId (generated from itemId)
 
 const afaraEm_01 = new GalleryItemData(
-    'https://jas112.github.io/st-rmx03/mx_resources/email_templates/afara_emTemplates/afara_build_01.html', 
+    'https://jas112.github.io/st-rmx04/mx_resources/email_templates/afara_emTemplates/afara_build_01.html', 
     afaraEm_01ThumbRef,
     'iframe', 
     'Afara Email 1 - org intro', 
@@ -54,7 +54,7 @@ const afaraEm_01 = new GalleryItemData(
 );
 
 const afaraEm_02 = new GalleryItemData(
-    'https://jas112.github.io/st-rmx03/mx_resources/email_templates/afara_emTemplates/afara_build_02.html', 
+    'https://jas112.github.io/st-rmx04/mx_resources/email_templates/afara_emTemplates/afara_build_02.html', 
     afaraEm_02ThumbRef,
     'iframe', 
     'Afara Email 2 - Origins to Action Foundational Course Offering', 
@@ -63,7 +63,7 @@ const afaraEm_02 = new GalleryItemData(
 );
 
 const afaraEm_03 = new GalleryItemData(
-    'https://jas112.github.io/st-rmx03/mx_resources/email_templates/afara_emTemplates/afara_events_build_01.html', 
+    'https://jas112.github.io/st-rmx04/mx_resources/email_templates/afara_emTemplates/afara_events_build_01.html', 
     afaraEm_03ThumbRef,
     'iframe', 
     'Afara Email 3 - Origin to Action Module 1 - Detail', 
@@ -72,7 +72,7 @@ const afaraEm_03 = new GalleryItemData(
 );
 
 const afaraEm_04 = new GalleryItemData(
-    'https://jas112.github.io/st-rmx03/mx_resources/email_templates/afara_emTemplates/afara_events_build_02.html', 
+    'https://jas112.github.io/st-rmx04/mx_resources/email_templates/afara_emTemplates/afara_events_build_02.html', 
     afaraEm_04ThumbRef,
     'iframe', 
     'Afara Email 4 - Origin to Action Module 2 - Detail', 
@@ -81,7 +81,7 @@ const afaraEm_04 = new GalleryItemData(
 );
 
 const afaraEm_05 = new GalleryItemData(
-    'https://jas112.github.io/st-rmx03/mx_resources/email_templates/afara_emTemplates/afara_events_build_03.html', 
+    'https://jas112.github.io/st-rmx04/mx_resources/email_templates/afara_emTemplates/afara_events_build_03.html', 
     afaraEm_05ThumbRef,
     'iframe', 
     'Afara Email 5 - Origin to Action Module 3 - Detail', 
@@ -90,7 +90,7 @@ const afaraEm_05 = new GalleryItemData(
 );
 
 const nflxEm_01 = new GalleryItemData(
-    'https://jas112.github.io/st-rmx03/mx_resources/email_templates/nflx_emTemplates/ntflx_build_custom_tudum_1.html', 
+    'https://jas112.github.io/st-rmx04/mx_resources/email_templates/nflx_emTemplates/ntflx_build_custom_tudum_1.html', 
     nflxEm_01ThumbRef,
     'iframe', 
     'NtFlx Email 1 - Custom rebuild - Tudum Announcement', 
@@ -99,7 +99,7 @@ const nflxEm_01 = new GalleryItemData(
 );
 
 const nflxEm_02 = new GalleryItemData(
-    'https://jas112.github.io/st-rmx03/mx_resources/email_templates/nflx_emTemplates/ntflx_build_custom_tudum_2.html', 
+    'https://jas112.github.io/st-rmx04/mx_resources/email_templates/nflx_emTemplates/ntflx_build_custom_tudum_2.html', 
     nflxEm_02ThumbRef,
     'iframe', 
     'NtFlx Email 2 - Custom rebuild - Tudum Announcement', 
@@ -108,7 +108,7 @@ const nflxEm_02 = new GalleryItemData(
 );
 
 const nflxEm_03 = new GalleryItemData(
-    'https://jas112.github.io/st-rmx03/mx_resources/email_templates/nflx_emTemplates/ntflx_build_custom_bridgerton_1.html', 
+    'https://jas112.github.io/st-rmx04/mx_resources/email_templates/nflx_emTemplates/ntflx_build_custom_bridgerton_1.html', 
     nflxEm_03ThumbRef,
     'iframe', 
     'NtFlx Email 3 - Custom rebuild - Bridgerton Season 3 Announcement', 
@@ -117,7 +117,7 @@ const nflxEm_03 = new GalleryItemData(
 );
 
 const nflxEm_04 = new GalleryItemData(
-    'https://jas112.github.io/st-rmx03/mx_resources/email_templates/nflx_emTemplates/ntflx_build_custom_bridgerton_2.html', 
+    'https://jas112.github.io/st-rmx04/mx_resources/email_templates/nflx_emTemplates/ntflx_build_custom_bridgerton_2.html', 
     nflxEm_04ThumbRef,
     'iframe', 
     'NtFlx Email 4 - Custom rebuild - Bridgerton Season 3 Announcement', 
@@ -126,7 +126,7 @@ const nflxEm_04 = new GalleryItemData(
 );
 
 const nflxEm_05 = new GalleryItemData(
-    'https://jas112.github.io/st-rmx03/mx_resources/email_templates/nflx_emTemplates/ntflx_build_custom_bridgerton_3.html', 
+    'https://jas112.github.io/st-rmx04/mx_resources/email_templates/nflx_emTemplates/ntflx_build_custom_bridgerton_3.html', 
     nflxEm_05ThumbRef,
     'iframe', 
     'NtFlx Email 5 - Custom rebuild - Bridgerton Season 3 Announcement', 
@@ -135,7 +135,7 @@ const nflxEm_05 = new GalleryItemData(
 );
 
 const stNgEm_01 = new GalleryItemData(
-    'https://jas112.github.io/st-rmx03/mx_resources/email_templates/stNg_emTemplates/stNg_nl_build_1.html', 
+    'https://jas112.github.io/st-rmx04/mx_resources/email_templates/stNg_emTemplates/stNg_nl_build_1.html', 
     stNgEm_01ThumbRef,
     'iframe', 
     'StNg Email 1 - Product Announcement / Offering', 
