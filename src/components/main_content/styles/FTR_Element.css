@@ -1,5 +1,26 @@
 /* FTR Element Style Definitions */
 
+/* Animations */
+
+@keyframes particleDrift{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-300px);
+        opacity: 0;
+    }
+}
+
+/* Elements */
+
 .ftr-element-block{
     width: 100%;
     /* overflow: hidden; */
@@ -24,12 +45,19 @@
 
 .ftr-block1{
     z-index: 20;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
 }
 
 .ftr-block2{
     width: 100%;
     padding: 0px;
     margin: 0px;
+    background-color: transparent;
+    background-position: center bottom;
+    background-size: 1000px auto;
+    background-repeat: no-repeat;
 }
 
 .ftr-element-bg{
@@ -61,4 +89,459 @@
 .ftr-bg-frm2{
     border: 1px solid #ffff0000;
     z-index: -30;
+}
+
+/* Particle Elements */
+
+.particles{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -70px;
+}
+
+.particles div{
+    /* width: 1px;
+    height: 30px; */
+    border-radius: 1px 1px 0px 0px;
+    background: -moz-linear-gradient(top, #ff4500, #ff450050, #ff450000);
+    background: -webkit-linear-gradient(top, #ff4500, #ff450050, #ff450000);
+    background: linear-gradient(to bottom, #ff4500, #ff450050, #ff450000);
+    animation: particleDrift 3s linear infinite;
+}
+
+.near-particle-frm{
+    position: relative;
+    top:3200px;
+}
+
+.mid-particle-frm{
+    position: relative;
+    top:3200px;
+}
+
+.far-particle-frm{
+    position: relative;
+    top:3200px;
+}
+
+/* .particles div:nth-child(1){
+    animation-delay:2s;
+    width: 5px;
+    height: 150px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.particles div:nth-child(2){
+    animation-delay:1s;
+}
+
+.particles div:nth-child(3){
+    animation-delay:3s;
+    width: 4px;
+    height: 120px;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.particles div:nth-child(4){
+    animation-delay:5s;
+}
+
+.particles div:nth-child(5){
+    animation-delay:3s;
+    width: 3px;
+    height: 90px;
+    border-radius: 3px 3px 0px 0px;
+}
+
+.particles div:nth-child(6){
+    animation-delay:6s;
+    width: 13px;
+    height: 390px;
+    border-radius: 13px 13px 0px 0px;
+}
+
+.particles div:nth-child(7){
+    animation-delay:7s;
+    width: 4px;
+    height: 120px;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.particles div:nth-child(8){
+    animation-delay:2s;
+    width: 5px;
+    height: 150px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.particles div:nth-child(9){
+    animation-delay:1s;
+}
+
+.particles div:nth-child(10){
+    animation-delay:3s;
+    width: 4px;
+    height: 120px;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.particles div:nth-child(11){
+    animation-delay:5s;
+}
+
+.particles div:nth-child(12){
+    animation-delay:5s;
+}
+
+.particles div:nth-child(13){
+    animation-delay:3s;
+    width: 3px;
+    height: 90px;
+    border-radius: 3px 3px 0px 0px;
+}
+
+.particles div:nth-child(14){
+    animation-delay:6s;
+    width: 13px;
+    height: 390px;
+    border-radius: 13px 13px 0px 0px;
+}
+
+.particles div:nth-child(15){
+    animation-delay:1s;
+}
+
+.particles div:nth-child(16){
+    animation-delay:3s;
+    width: 4px;
+    height: 120px;
+    border-radius: 4px 4px 0px 0px;
+} */
+
+/* Near Particles */
+
+.near-particles div{
+    width: 9px;
+    height: 270px;
+    border-radius: 9px 9px 0px 0px;
+    border-top: 4px solid #ff450099;
+    filter: drop-shadow(0 0 5em #ff4500);
+    background: -moz-linear-gradient(top, #ff450098, #ff450050, #ff450000);
+    background: -webkit-linear-gradient(top, #ff450098, #ff450050, #ff450000);
+    background: linear-gradient(to bottom, #ff450098, #ff450050, #ff450000);
+    animation: particleDrift 3s linear infinite;
+}
+
+.near-particles div:nth-child(1){
+    animation-delay:2s;
+    width: 7px;
+    height: 210px;
+    border-radius: 7px 7px 0px 0px;
+}
+
+.near-particles div:nth-child(2){
+    animation-delay:1s;
+}
+
+.near-particles div:nth-child(3){
+    animation-delay:3s;
+    width: 8px;
+    height: 240px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.near-particles div:nth-child(4){
+    animation-delay:5s;
+}
+
+.near-particles div:nth-child(5){
+    animation-delay:3s;
+    width: 6px;
+    height: 180px;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.near-particles div:nth-child(6){
+    animation-delay:6s;
+    width: 10px;
+    height: 300px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.near-particles div:nth-child(7){
+    animation-delay:7s;
+    width: 6px;
+    height: 180px;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.near-particles div:nth-child(8){
+    animation-delay:2s;
+    width: 7px;
+    height: 210px;
+    border-radius: 7px 7px 0px 0px;
+}
+
+.near-particles div:nth-child(9){
+    animation-delay:1s;
+}
+
+.near-particles div:nth-child(10){
+    animation-delay:3s;
+    width: 6px;
+    height: 180px;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.near-particles div:nth-child(11){
+    animation-delay:5s;
+}
+
+.near-particles div:nth-child(12){
+    animation-delay:5s;
+}
+
+.near-particles div:nth-child(13){
+    animation-delay:3s;
+    width: 5px;
+    height: 180px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.near-particles div:nth-child(14){
+    animation-delay:6s;
+    width: 11px;
+    height: 330px;
+    border-radius: 11px 11px 0px 0px;
+}
+
+.near-particles div:nth-child(15){
+    animation-delay:1s;
+}
+
+.near-particles div:nth-child(16){
+    animation-delay:3s;
+    width: 8px;
+    height: 240px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+/* Mid Particles */
+
+.mid-particles div{
+    width: 6px;
+    height: 180px;
+    border-radius: 6px 6px 0px 0px;
+    border-top: 4px solid #ff450099;
+    filter: drop-shadow(0 0 5em #ff4500);
+    background: -moz-linear-gradient(top, #ff450098, #ff450050, #ff450000);
+    background: -webkit-linear-gradient(top, #ff450098, #ff450050, #ff450000);
+    background: linear-gradient(to bottom, #ff450098, #ff450050, #ff450000);
+    animation: particleDrift 3s linear infinite;
+}
+
+.mid-particles div:nth-child(1){
+    animation-delay:2s;
+    width: 4px;
+    height: 120px;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.mid-particles div:nth-child(2){
+    animation-delay:1s;
+}
+
+.mid-particles div:nth-child(3){
+    animation-delay:3s;
+    width: 5px;
+    height: 150px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.mid-particles div:nth-child(4){
+    animation-delay:5s;
+}
+
+.mid-particles div:nth-child(5){
+    animation-delay:3s;
+    width: 6px;
+    height: 180px;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.mid-particles div:nth-child(6){
+    animation-delay:6s;
+    width: 7px;
+    height: 210px;
+    border-radius: 7px 17px 0px 0px;
+}
+
+.mid-particles div:nth-child(7){
+    animation-delay:7s;
+    width: 6px;
+    height: 180px;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.mid-particles div:nth-child(8){
+    animation-delay:2s;
+    width: 4px;
+    height: 120px;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.mid-particles div:nth-child(9){
+    animation-delay:1s;
+}
+
+.mid-particles div:nth-child(10){
+    animation-delay:3s;
+    width: 4px;
+    height: 180px;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.mid-particles div:nth-child(11){
+    animation-delay:5s;
+}
+
+.mid-particles div:nth-child(12){
+    animation-delay:5s;
+}
+
+.mid-particles div:nth-child(13){
+    animation-delay:3s;
+    width: 5px;
+    height: 150px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.mid-particles div:nth-child(14){
+    animation-delay:6s;
+    width: 8px;
+    height: 240px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.mid-particles div:nth-child(15){
+    animation-delay:1s;
+}
+
+.mid-particles div:nth-child(16){
+    animation-delay:3s;
+    width: 5px;
+    height: 150px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+
+/* Far Particles */
+
+.far-particles div{
+    width: 3px;
+    height: 90px;
+    border-radius: 3px 3px 0px 0px;
+    border-top: 4px solid #ff450099;
+    filter: drop-shadow(0 0 5em #ff4500);
+    background: -moz-linear-gradient(top, #ff450098, #ff450050, #ff450000);
+    background: -webkit-linear-gradient(top, #ff450098, #ff450050, #ff450000);
+    background: linear-gradient(to bottom, #ff450098, #ff450050, #ff450000);
+    animation: particleDrift 3s linear infinite;
+}
+
+.far-particles div:nth-child(1){
+    animation-delay:2s;
+    width: 1px;
+    height: 30px;
+    border-radius: 1px 1px 0px 0px;
+}
+
+.far-particles div:nth-child(2){
+    animation-delay:1s;
+}
+
+.far-particles div:nth-child(3){
+    animation-delay:3s;
+    width: 2px;
+    height: 60px;
+    border-radius: 2px 2px 0px 0px;
+}
+
+.far-particles div:nth-child(4){
+    animation-delay:5s;
+}
+
+.far-particles div:nth-child(5){
+    animation-delay:3s;
+    width: 4px;
+    height: 120px;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.far-particles div:nth-child(6){
+    animation-delay:6s;
+    width: 5px;
+    height: 150px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.far-particles div:nth-child(7){
+    animation-delay:7s;
+    width: 3px;
+    height: 180px;
+    border-radius: 3px 3px 0px 0px;
+}
+
+.far-particles div:nth-child(8){
+    animation-delay:2s;
+    width: 1px;
+    height: 120px;
+    border-radius: 1px 1px 0px 0px;
+}
+
+.far-particles div:nth-child(9){
+    animation-delay:1s;
+}
+
+.far-particles div:nth-child(10){
+    animation-delay:3s;
+    width: 2px;
+    height: 120px;
+    border-radius: 2px 2px 0px 0px;
+}
+
+.far-particles div:nth-child(11){
+    animation-delay:5s;
+}
+
+.far-particles div:nth-child(12){
+    animation-delay:5s;
+}
+
+.far-particles div:nth-child(13){
+    animation-delay:3s;
+    width: 2px;
+    height: 60px;
+    border-radius: 2px 2px 0px 0px;
+}
+
+.far-particles div:nth-child(14){
+    animation-delay:6s;
+    width: 8px;
+    height: 240px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.far-particles div:nth-child(15){
+    animation-delay:1s;
+}
+
+.far-particles div:nth-child(16){
+    animation-delay:3s;
+    width: 1px;
+    height: 100px;
+    border-radius: 1px 1px 0px 0px;
 }

@@ -2,16 +2,18 @@ import React, { useRef, useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faPause, faStop, faBackwardStep, faForwardStep, faRepeat } from '@fortawesome/free-solid-svg-icons';
 import './styles/AudioPlayer.css'
-import bgMusic1 from '../../assets/audio/Stars_in_the_Night.mp3'
+import bgMusic1 from '../../assets/audio/Ys_Wisdom-I.mp3'
 import bgMusic2 from '../../assets/audio/Galactic_Voyage.mp3'
-import bgMusic3 from '../../assets/audio/Road_to_Glory.mp3'
+import bgMusic3 from '../../assets/audio/Nebula_Dreams.mp3'
 import bgMusic4 from '../../assets/audio/Cosmic_Warrior.mp3'
+import bgMusic5 from '../../assets/audio/Ys_Wisdom-II.mp3'
 
 const tracks = [
-    {track_number: 1, title: 'Stars in the Night', src: bgMusic1},
+    {track_number: 1, title: 'Ys Wisdom I', src: bgMusic1},
     {track_number: 2, title: 'Galactic Voyage', src: bgMusic2},
-    {track_number: 3, title: 'Road to Glory', src: bgMusic3},
-    {track_number: 4, title: 'Cosmic Warrior', src: bgMusic4}
+    {track_number: 3, title: 'Nebula_Dreams', src: bgMusic3},
+    {track_number: 4, title: 'Cosmic Warrior', src: bgMusic4},
+    {track_number: 4, title: 'Ys Wisdom II', src: bgMusic5}
 ]
 
 const AudioPlayer = ({        
@@ -24,7 +26,7 @@ const AudioPlayer = ({
     const [duration, setDuration] = useState(0);
     // const [currentTrack, setCurrentTrack] = useState(tracks[0]);
     const [currentTrackIdx, setCurrentTrackIdx] = useState(0);
-    const [isRepeating, setIsRepeating] = useState(true);
+    const [isRepeating, setIsRepeating] = useState(false);
     const [isPlaying, setIsPlaying] = useState(false);
 
     const currentTrack = tracks[currentTrackIdx];
@@ -147,7 +149,7 @@ const AudioPlayer = ({
                 <div className='audio-player-btn forward' onClick={handleForward} title='Next Track'>
                     <FontAwesomeIcon icon={faForwardStep} />
                 </div>
-                <div className={`audio-player-btn repeat ${isRepeating ? 'repeat-active' : 'repeat-inactive'}`} onClick={toggleRepeat} title={`${isRepeating ? 'Repeat On' : 'Repeat Off'}`}>
+                <div className={`audio-player-btn repeat ${isRepeating ? 'repeat-active' : 'repeat-inactive'}`} onClick={toggleRepeat} title={`${isRepeating ? 'Repeat Track On' : 'Repeat Track Off'}`}>
                     <FontAwesomeIcon icon={faRepeat} />
                 </div>
             </div>
