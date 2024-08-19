@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './styles/NavBar.css';
 import stLogo from '../../assets/images/siteFeatures_imgs/ST_logo-RSCCsm.png'
+import stLogoReduced from '../../assets/images/webIcons_imgs/ST_icon-nav-wb-100.png'
 import NavBar_NavPoint from './NavBar_NavPoint';
 import AudioPlayer from '../audioPlayer/AudioPlayer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,10 +12,12 @@ const NavBar = ({
     currentScroll, 
     currentDate, 
     currentTime, 
-    currentPageLocation, 
+    currentPageLocation,
+    setCurrentPageLocation, 
     scrollToTop, 
     scrollToBottom, 
     scrollToSection, 
+    screenWidth,
     sfxActive, 
     setSfxActive, 
     musicActive,
@@ -29,6 +32,13 @@ const NavBar = ({
     parallaxRemix,
     setParallaxRemix}) => {
 
+    // console.log(`screen width - ${screenWidth}`);
+
+    const reduceNavElement = screenWidth <= 460;
+    const hideStBtn = screenWidth <= 294;
+
+    // console.log(`reduceNavElement - ${reduceNavElement}`);
+
     const [isNavOpen, setIsNavOpen] = useState(false);
 
     const toggleNavMode = () => {
@@ -42,9 +52,9 @@ const NavBar = ({
   return (
     <nav className='navbar'>
         <div className='navbar-panel left-panel'>
-            <img src={stLogo} 
-                className='navbar-logo' 
-                alt='SpaceTripp Logo'
+            <img src={reduceNavElement ? stLogoReduced : stLogo} 
+                className={reduceNavElement ? 'navbar-logo-reduced' : 'navbar-logo'} 
+                alt={reduceNavElement ? 'SpaceTripp Logo Glyph' : 'SpaceTripp Logo'}
                 onMouseEnter={() => {
                     handleItemInteractionSound(sectionHoverSoundEnter);
                 }}
@@ -52,9 +62,10 @@ const NavBar = ({
             <AudioPlayer 
                 musicActive={musicActive}
                 setMusicActive={setMusicActive}
+                screenWidth={screenWidth}
             />
             <div 
-                className={`st-btn ${musicActive ? '' : 'st-off'}`} 
+                className={`st-btn ${musicActive ? '' : 'st-off'} ${hideStBtn ? 'hide-st-btn-cdn' : ''}`} 
                 title={musicActive ? 'Mute BG Music' : 'Unmute BG Music'} 
                 onMouseEnter={() => {
                     handleItemInteractionSound(sectionHoverSoundEnter);
@@ -67,7 +78,7 @@ const NavBar = ({
                         setMusicActive(!musicActive)}}  />
             </div> 
             <div 
-                className={`st-btn ${sfxActive ? '' : 'st-off'}`}  
+                className={`st-btn ${sfxActive ? '' : 'st-off'} ${hideStBtn ? 'hide-st-btn-cdn' : ''}`}  
                 title={sfxActive ? 'Mute Sound FX' : 'Unmute Sound FX'}
                 onMouseEnter={() => {
                     handleItemInteractionSound(sectionHoverSoundEnter);

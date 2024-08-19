@@ -18,6 +18,7 @@ const tracks = [
 
 const AudioPlayer = ({        
     musicActive,
+    screenWidth,
     setMusicActive}) => {
 
     const audioRef = useRef(null);
@@ -28,6 +29,8 @@ const AudioPlayer = ({
     const [currentTrackIdx, setCurrentTrackIdx] = useState(0);
     const [isRepeating, setIsRepeating] = useState(false);
     const [isPlaying, setIsPlaying] = useState(false);
+
+    const hideAudioPlayer = screenWidth <= 460;
 
     const currentTrack = tracks[currentTrackIdx];
 
@@ -129,7 +132,7 @@ const AudioPlayer = ({
 
   return (
     <div 
-        className={`audio-player-frame ${musicActive ? '' : 'music-disabled'}`}
+        className={`audio-player-frame ${musicActive ? '' : 'music-disabled'} ${hideAudioPlayer ? 'hide-player' : ''}`}
     >
         <audio ref={audioRef}>
             <source src={currentTrack.src} type='audio/mpeg' />

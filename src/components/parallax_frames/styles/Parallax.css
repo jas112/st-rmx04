@@ -29,6 +29,7 @@
     top:0;
     left:0;
     z-index:-50;
+    /* border: 1px solid greenyellow; */
 }
 
 .parallax-frame-holder-foreground{
@@ -182,6 +183,10 @@
     transition: opacity .2s;
 }
 
+.starFrame{
+    /* align-self: center; */
+}
+
 .hide{
     opacity: 0;
 }
@@ -278,5 +283,5 @@
         display: none;
         opacity: 0;
     }
-  
+
 }

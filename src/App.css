@@ -35,22 +35,39 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .hdr-element{
+  padding: 0px 0px;
+  margin: 0px auto;
   display: flex;
+  flex-flow: row nowrap;
   justify-content: center; /* Centers the image horizontally */
   overflow-x: hidden; /* Hides overflow on the x-axis */
-  width: 100%;
+  width: 1500px;
+  max-width: 100%;
+  height: 7654px;
+  position: relative;
+  /* border: 2px solid goldenrod; */
 }
 
-.hdr-element img{
-  max-width: none; /* Prevents the image from scaling down */
-  width: 842px; /* Ensures the image remains 842px wide */
+.content-container{
+  padding: 0px 0px;
+  margin: 0px auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center; /* Centers the image horizontally */
+  overflow-x: hidden; /* Hides overflow on the x-axis */
+  width: 1500px;
+  max-width: 100%;
+  height: 10654px;
+  position: relative;
+  /* border: 2px solid goldenrod; */
 }
 
 .content-element{
   width: 100%;
+  min-width: 274px;
   min-height: 100%;
   /* background: #ff000030; */
-  /* border: solid 1px red; */
+  /* border: solid 1px goldenrod; */
   padding: 0px;
   /* position: relative; */
 }
@@ -66,7 +83,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .ftr-scene{
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   overflow-y: hidden;
   height: 700px;
 }
@@ -80,7 +97,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .page-nav-ref{
   z-index: 8999;
-  margin: 700px 0;
+  margin: 0px 0px;
 }
 
 .terminus-nav{

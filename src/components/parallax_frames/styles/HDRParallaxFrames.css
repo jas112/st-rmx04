@@ -46,7 +46,7 @@
     max-width: none; /* Prevents the image from scaling down */
     width: 1400px; /* Ensures the image remains 842px wide */
     margin: 0x auto;
-    /* border:1px solid red; */
+    /* border:1px solid skyblue; */
     align-self: center;
     position: absolute;
     top: 0%;

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import './App.css'
 import sectionsData from './data_resources/sections.js';
 import scrollTransforms from './data_resources/scrollTransforms.js';
@@ -44,11 +44,11 @@ function App() {
   // console.log(JSON.stringify(sectionsData[Object.keys(sectionRefs)[0]]));
 
   const getSectionUpperBound = (sectionValue) => {
-    return sectionRefs[sectionValue].current.offsetTop - 400;
+    return sectionRefs[sectionValue].current.offsetTop - 300;
   }
 
   const getSectionLowerBound = (sectionValue) => {
-    return sectionRefs[sectionValue].current.offsetTop + sectionRefs[sectionValue].current.offsetHeight + 400;
+    return sectionRefs[sectionValue].current.offsetTop + sectionRefs[sectionValue].current.offsetHeight + 300;
   }
 
   useEffect(() => {
@@ -70,6 +70,13 @@ function App() {
       const visDsnSectionLowerBoundY = getSectionLowerBound('visualDesign');
       const terminusSectionUpperBoundY = getSectionUpperBound('terminus');
       const terminusSectionLowerBoundY = getSectionLowerBound('terminus');
+
+      // console.log(`about - ${aboutSectionUpperBoundY} | ${aboutSectionLowerBoundY}`);
+      // console.log(`webDev - ${webDevSectionUpperBoundY} | ${webDevSectionLowerBoundY}`);
+      // console.log(`emailDev - ${emailDevSectionUpperBoundY} | ${emailDevSectionLowerBoundY}`);
+      // console.log(`grfxDsn - ${grfxDsnSectionUpperBoundY} | ${grfxDsnSectionUpperBoundY}`);
+      // console.log(`visDsn - ${visDsnSectionUpperBoundY} | ${visDsnSectionLowerBoundY}`);
+      // console.log(`terminus - ${terminusSectionUpperBoundY} | ${terminusSectionLowerBoundY}`);
 
       const endTop = bottomRef.current.offsetTop;
 
@@ -118,6 +125,7 @@ function App() {
   }
 
   useEffect(() => {
+    // console.log(`scroll value - ${scrollPositionY} | pageLocation - ${currentPageLocation}`);
     document.documentElement.style.setProperty('--scrollbar-track-bgColor', determineScrollTransform('sBarTrackBGolor'));
     document.documentElement.style.setProperty('--scrollbar-thumb-bgColor', determineScrollTransform('sBarThumbBGColor'));
     document.documentElement.style.setProperty('--scrollbar-thumb-border', determineScrollTransform('sBarThumbBorder'));
@@ -192,14 +200,14 @@ function App() {
     }
   };
 
-
   return (
     <>
-    <NavBar 
+      <NavBar 
         currentScroll={scrollPositionY} 
         currentDate={dateString}
         currentTime={timeString} 
         currentPageLocation={currentPageLocation} 
+        setCurrentPageLocation={setCurrentPageLocation}
         scrollToTop={scrollToTop} 
         scrollToBottom={scrollToBottom} 
         scrollToSection={scrollToSection} 
@@ -217,34 +225,41 @@ function App() {
         handleItemInteractionSound={handleItemInteractionSound}
         parallaxRemix={parallaxRemix} 
         setParallaxRemix={setParallaxRemix}
-      />
-      <HDRParallaxFrames parallaxRemix={parallaxRemix}/>
-      <div className='hdr-element'></div>
-      <div className='content-element'>
+      /> 
+      <div className='content-container'>
+        <HDRParallaxFrames parallaxRemix={parallaxRemix}/>
         <div ref={topRef}></div>
+        <SpacerElement factor={6}/>
         <SpacerElement factor={10}/>
+        <SpacerElement factor={12}/>
         {Object.keys(sectionRefs).slice(0, 5).map((sectionKey,idx) =>(
-          <div className='page-nav-ref section-nav-frame' key={idx} ref={sectionRefs[sectionKey]}>
-            <SectionElement 
-              sectionDataValue={sectionsData[sectionKey]} 
-              currentPageLocation={currentPageLocation}
-              parallaxRemix={parallaxRemix}
-              sectionHoverSoundEnter={sectionHoverSoundEnter}
-              sectionHoverSoundExit={sectionHoverSoundExit}
-              btnHoverSound={btnHoverSound}
-              btnClickSound={btnClickSound}
-              handleItemInteractionSound={handleItemInteractionSound}
-            />
-          </div>
+          <React.Fragment key={idx}>
+            <SpacerElement factor={3}/>
+            <div className='page-nav-ref section-nav-frame' ref={sectionRefs[sectionKey]}>
+              <SectionElement 
+                sectionDataValue={sectionsData[sectionKey]} 
+                currentPageLocation={currentPageLocation}
+                setCurrentPageLocation={setCurrentPageLocation}
+                parallaxRemix={parallaxRemix}
+                sectionHoverSoundEnter={sectionHoverSoundEnter}
+                sectionHoverSoundExit={sectionHoverSoundExit}
+                btnHoverSound={btnHoverSound}
+                btnClickSound={btnClickSound}
+                handleItemInteractionSound={handleItemInteractionSound}
+              />
+            </div>
+            <SpacerElement factor={3}/>
+          </React.Fragment>
         ))}
-        <SpacerElement factor={7}/>
+        <SpacerElement factor={10}/>
       </div>
       <div className='ftr-element'>
-        <SpacerElement factor={2}/>
+        <SpacerElement factor={7}/>
         <div className='page-nav-ref terminus-nav' ref={sectionRefs.terminus}>
           <TerminusSection 
             sectionDataValue={sectionsData.terminus}
             currentPageLocation={currentPageLocation}
+            setCurrentPageLocation={setCurrentPageLocation}
             parallaxRemix={parallaxRemix}
             sectionHoverSoundEnter={sectionHoverSoundEnter}
             sectionHoverSoundExit={sectionHoverSoundExit}

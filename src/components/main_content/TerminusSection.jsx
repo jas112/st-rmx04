@@ -13,6 +13,7 @@ import { faBolt } from '@fortawesome/free-solid-svg-icons'
 const TerminusSection = ({
     sectionDataValue, 
     currentPageLocation,
+    setCurrentPageLocation,
     parallaxRemix,
     sectionHoverSoundEnter,
     sectionHoverSoundExit, 
@@ -30,6 +31,12 @@ const TerminusSection = ({
         triggerOnce: false, // keep observing SectionElement
         threshold: 0.2, // trigger when 10% of the element is in view
     });
+
+    // console.log(`sectionMarker - ${sectionDataValue.sectionMarker} | inView - ${inView}`);
+
+    // if (inView) {
+    // setCurrentPageLocation(sectionDataValue.sectionMarker);
+    // }
 
     useEffect(() => {
 

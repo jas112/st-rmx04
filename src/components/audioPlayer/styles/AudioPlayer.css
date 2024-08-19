@@ -10,6 +10,10 @@
 
 }
 
+.hide-player{
+    display:none;
+}
+
 .audio-player-frame:hover{
     opacity: 1;
     color: #ff4500;

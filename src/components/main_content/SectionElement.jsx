@@ -9,6 +9,7 @@ import {generateText} from '../../utils/contentTools.jsx'
 const SectionElement = ({
     sectionDataValue,
     currentPageLocation, 
+    setCurrentPageLocation,
     parallaxRemix, 
     sectionHoverSoundEnter,
     sectionHoverSoundExit,
@@ -29,6 +30,18 @@ const SectionElement = ({
         triggerOnce: false, // keep observing SectionElement
         threshold: 0.2, // trigger when 10% of the element is in view
     });
+
+    // console.log(`sectionMarker - ${sectionDataValue.sectionMarker} | inView - ${inView}`);
+
+    // if (inView) {
+    // setCurrentPageLocation(sectionDataValue.sectionMarker);
+    // }
+
+    // useEffect(() => {
+    //   if (inView) {
+    //     console.log(`sectionMarker - ${sectionDataValue.sectionMarker} | inView - ${inView}`);
+    //   }
+    // }, [inView])
 
     useEffect(() => {
 
